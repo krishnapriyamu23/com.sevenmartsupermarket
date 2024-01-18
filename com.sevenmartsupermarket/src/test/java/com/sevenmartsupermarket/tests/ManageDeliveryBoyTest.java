@@ -39,18 +39,18 @@ public class ManageDeliveryBoyTest extends Base {
 		String actualURL= driver.getCurrentUrl();
 		softassert.assertEquals(actualURL, expectedURL);
 	}
-//	
-//	@Test
-//	public void verifyDeliverBoyEdit() {
-//		loginPage=new LoginPage(driver);
-//		manageDeliveryBoyPage=new ManageDeliveryBoyPage(driver);	
-//		loginPage.login();
-//		manageDeliveryBoyPage.clickOnManageDeliveryBoy();
-//		manageDeliveryBoyPage.editDeliveryBoy("ShameenaPS");
-//		manageDeliveryBoyPage.enterName("Rahul");
-//		manageDeliveryBoyPage.clickOnUpdateButton();
-		
-//	}
+
+	@Test
+	public void verifyDeliverBoyEdit() {
+		loginPage=new LoginPage(driver);
+		manageDeliveryBoyPage=new ManageDeliveryBoyPage(driver);	
+		loginPage.login();
+		manageDeliveryBoyPage.clickOnManageDeliveryBoy();
+		manageDeliveryBoyPage.editDeliveryBoy("ShameenaPS");
+		manageDeliveryBoyPage.enterName("Rahul");
+		manageDeliveryBoyPage.clickOnUpdateButton();
+//		
+	}
 
 //	@Test(groups={"smoke","regression"})
 //
