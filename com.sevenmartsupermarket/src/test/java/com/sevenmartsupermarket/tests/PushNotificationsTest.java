@@ -5,26 +5,27 @@ import org.testng.asserts.SoftAssert;
 
 import com.sevenmartsupermarket.base.Base;
 import com.sevenmartsupermarket.pages.LoginPage;
-import com.sevenmartsupermarket.pages.PushNotificationPage;
-import com.sevenmartsupermarket.utilities.ExcelRead;
+import com.sevenmartsupermarket.pages.PushNotificationsPage;
+import com.sevenmartsupermarket.utilities.ExcelReadUtility;
 
-public class PushNotificationTest extends Base {
+public class PushNotificationsTest extends Base {
 
-	PushNotificationPage pushNotificationPage;
+	PushNotificationsPage pushNotificationsPage;
 	LoginPage loginPage;
-	ExcelRead excelRead=new ExcelRead();
+	ExcelReadUtility excelRead=new ExcelReadUtility();
 	SoftAssert softassert=new SoftAssert();;
-	@Test(groups = "smoke")
+	@Test
 	public void verifyPushNotificationMessage() throws InterruptedException {
-		pushNotificationPage=new PushNotificationPage(driver);
+		pushNotificationsPage=new PushNotificationsPage(driver);
 		loginPage=new LoginPage(driver);
 		loginPage.login();
 		excelRead.setExcelFile("PushNotifications", "Notification"); 
-		pushNotificationPage.clickOnPushNotifications();
+		pushNotificationsPage.clickOnPushNotifications();
 		String title=excelRead.getCellData(1, 0);
 		String description=excelRead.getCellData(1, 1);
-		pushNotificationPage.sendNotifications(title, description);
-		
-//		softassert.assertAll();
+		pushNotificationsPage.sendNotifications(title, description);
+		softassert.assertTrue(pushNotificationsPage.isSuccessAlertDisplayed());
+		softassert.assertAll();
 	}
+	
 }

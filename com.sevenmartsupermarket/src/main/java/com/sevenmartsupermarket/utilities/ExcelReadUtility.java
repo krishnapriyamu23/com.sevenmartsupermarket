@@ -10,7 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.sevenmartsupermarket.constants.Constants;
 
-public class ExcelRead {
+public class ExcelReadUtility {
 	XSSFSheet sheet;
 	XSSFWorkbook workbook;
 	XSSFRow row;

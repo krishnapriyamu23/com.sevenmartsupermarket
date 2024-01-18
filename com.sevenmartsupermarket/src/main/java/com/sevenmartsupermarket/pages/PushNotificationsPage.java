@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.sevenmartsupermarket.utilities.GeneralUtility;
 import com.sevenmartsupermarket.utilities.WaitUtility;
 
-public class PushNotificationPage {
+public class PushNotificationsPage {
 
 	WebDriver driver;
 	GeneralUtility generalUtility;
@@ -22,7 +22,7 @@ public class PushNotificationPage {
 	WebElement sendButton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
 	WebElement successAlertElement;
-	public PushNotificationPage(WebDriver driver) {
+	public PushNotificationsPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -46,6 +46,6 @@ public class PushNotificationPage {
 	public void sendNotifications(String title,String description) {
 		enterTitle(title);
 		enterDescription(description);
-		clickOnSendButton();
+		clickOnSendButton(); 
 	}
 }

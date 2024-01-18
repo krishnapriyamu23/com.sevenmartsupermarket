@@ -20,6 +20,12 @@ public class ManageDeliveryBoyPage {
 
 	@FindBy(xpath = "//ul[@class='nav nav-pills nav-sidebar flex-column']//li[13]")
 	WebElement manageDeliveryBoyElement;
+	
+	@FindBy(xpath = "//h1[@class='m-0 text-dark']")
+	WebElement actualHeading;
+	
+	@FindBy(xpath = "//li[@class='breadcrumb-item']")
+	WebElement homeButton;
 
 	@FindBy(xpath = "//table[@class='table table-bordered table-hover table-sm']//tbody//tr//td[1]")
 	List<WebElement> nameElements;
@@ -66,6 +72,13 @@ public class ManageDeliveryBoyPage {
 	public void clickOnManageDeliveryBoy() {
 		manageDeliveryBoyElement.click();
 	}
+	public String getHeading() {
+		String headingText = actualHeading.getText();
+		return headingText;
+	}
+	public void clickOnHomeButton() {
+		homeButton.click();
+	}
 
 	public void clickOnCreateNewDeliveryBoy() {
 		createNewDeliveryBoyElement.click();
@@ -109,8 +122,7 @@ public class ManageDeliveryBoyPage {
 		nameElement.clear();
 	}
 
-	public void sendDeliveryBoyData(String name, String email, String phone, String address, String username,
-			String password) {
+	public void sendDeliveryBoyData(String name, String email, String phone, String address, String username, String password) {
 		enterName(name);
 		enterEmail(email);
 		enterPhoneNumber(phone);
@@ -143,7 +155,7 @@ public class ManageDeliveryBoyPage {
 			}
 		}
 		WebElement editDeliveryBoyElement = driver.findElement(By.xpath(
-				"//table[@class='table table-bordered table-hover table-sm']//tbody/tr[" + index + "]/td[8]//a[1]"));
+				"//table[@class='table table-bordered table-hover table-sm']//tbody/tr[\" + index + \"]/td[8]//a[1]"));
 		pageUtility.scroll_AndClick(editDeliveryBoyElement);
 		clearName();
 	}

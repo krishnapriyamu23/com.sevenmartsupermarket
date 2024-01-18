@@ -5,7 +5,7 @@
     <classes>
       <class name="com.sevenmartsupermarket.tests.ManageDeliveryBoyTest">
         <methods>
-          <include name="verifyDeliverBoyEdit"/>
+          <include name="verifyCreatingNewDeliveryBoy"/>
           <include name="launchBrowser"/>
           <include name="launchBrowser"/>
           <include name="terminateSession"/>

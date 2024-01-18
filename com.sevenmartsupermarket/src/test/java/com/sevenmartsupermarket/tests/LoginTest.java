@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import com.sevenmartsupermarket.base.Base;
 import com.sevenmartsupermarket.pages.HomePage;
 import com.sevenmartsupermarket.pages.LoginPage;
-import com.sevenmartsupermarket.utilities.ExcelRead;
+import com.sevenmartsupermarket.utilities.ExcelReadUtility;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,7 +16,7 @@ public class LoginTest extends Base {
 
 	LoginPage loginPage;
 	HomePage homePage;
-	ExcelRead excelRead = new ExcelRead();
+	ExcelReadUtility excelRead = new ExcelReadUtility();
 
 	@Test(groups = "regression")
 	public void verifyLogin() {

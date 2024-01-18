@@ -19,6 +19,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.sevenmartsupermarket.constants.Constants;
 
+
 public class ExtentReporter implements IReporter {
 	private ExtentReports extent;
 
@@ -66,8 +67,7 @@ public class ExtentReporter implements IReporter {
 	}
 
 	private Date getTime(long millis) {
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTimeInMillis(millis);
-		return calendar.getTime();
-	}
-}
+	Calendar calendar = Calendar.getInstance();
+	calendar.setTimeInMillis(millis);
+	return calendar.getTime();
+	}}

@@ -15,7 +15,7 @@ public class WaitUtility {
 
 	public static void waitForButtonToBeClickable(WebDriver driver, WebElement element) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h5[@class='card-title']")));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
 	public static void waitForVisibilityOfElement(WebDriver driver, String xPath) {

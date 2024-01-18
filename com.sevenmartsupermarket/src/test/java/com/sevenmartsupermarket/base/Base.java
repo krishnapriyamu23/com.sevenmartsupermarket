@@ -27,7 +27,7 @@ public class Base {
 	FileInputStream ip;
 	ScreenShot screenShot = new ScreenShot();
 
-	/** Initializing config file **/
+	
 	public Base() {
 		try {
 			ip = new FileInputStream(Constants.CONFIG_FILE_PATH);
@@ -36,8 +36,6 @@ public class Base {
 			e.printStackTrace();
 		}
 	}
-
-	/** Launching browser **/
 	public void initialize(String browser, String url) {
 		if (browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
