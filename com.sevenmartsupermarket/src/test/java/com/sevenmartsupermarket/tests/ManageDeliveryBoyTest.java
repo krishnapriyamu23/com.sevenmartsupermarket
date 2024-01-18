@@ -77,4 +77,4 @@ public class ManageDeliveryBoyTest extends Base {
 //		softassert.assertTrue(manageDeliveryBoyPage.isSuccessMessageAlertDisplayed());
 //		softassert.assertAll();
 	}
-}
+
